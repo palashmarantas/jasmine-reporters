@@ -1,10 +1,11 @@
 ---
 framework: jasmine
+parallelism: 3
+blocklist:
+ - "spec/JUnitXmlReporterSpec.js"
 postMerge:
   pattern:
     - "./spec/**/*Spec.js"
-blacklist:
-  - 'spec/JUnitXmlReporterSpec.js##JUnitXmlReporter##constructor##file prefix##'
 preMerge:
   pattern:
     - "./spec/**/*Spec.js"
